@@ -15,12 +15,25 @@
 
 ```yaml
 env:
-  GITLAB_REPO_URL: ${{ secrets.GITLAB_REPO_URL }}
-  WECOM_WEBHOOK_KEY: ${{ secrets.WECOM_WEBHOOK_KEY }}
-  MENTION_MOBILE_LIST: ${{ secrets.MENTION_MOBILE_LIST }}
+  GITLAB_REPO_URL: ${{ secrets.GITLAB_REPO_URL }}  # 仓库oauth2 地址
+  WECOM_WEBHOOK_KEY: ${{ secrets.WECOM_WEBHOOK_KEY }} # 企业微信 webhook key
+  MENTION_MOBILE_LIST: ${{ secrets.MENTION_MOBILE_LIST }} # 企业微信@人员手机号（可不填）
 ```
+- `PGYER_API_KEY` 蒲公英 api 上传 key
+- `CODE_SIGNING_IDENTITY`  IOS code-signing-identity
+- `TEAM_ID` IOS 证书TEAM ID
 
-另外还有蒲公英 `PGYER_API_KEY` Secret
+IOS:
+
+代码文件下放对应证书 `p12` 和 `mobileprovision`
+
+```yaml
+ with:
+    project-path: ios/GMerchant.xcodeproj
+    workspace-path: ios/GMerchant.xcworkspace
+    p12-path: ios/Certificates.p12
+    mobileprovision-path: ios/merchant.mobileprovision
+```
 
 ## 其他
 
