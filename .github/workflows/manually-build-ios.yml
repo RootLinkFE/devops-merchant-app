@@ -65,10 +65,10 @@ jobs:
 
       - uses: yukiarrr/ios-build-action@v1.4.0
         with:
-          project-path: ios/g_service.xcodeproj
-          workspace-path: ios/g_service.xcworkspace
-          p12-path: ios/Certificates.p12
-          mobileprovision-path: ios/tieniu.mobileprovision
+          project-path: ios/GMerchant.xcodeproj
+          workspace-path: ios/GMerchant.xcworkspace
+          p12-path: ios/app.p12
+          mobileprovision-path: ios/app.mobileprovision
           # p12-base64: ${{ secrets.P12_BASE64 }}
           # p12-cer-base64: ${{ secrets.P12_CER_BASE64 }}
           # mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
