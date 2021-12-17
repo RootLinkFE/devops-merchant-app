@@ -34,14 +34,14 @@ else
     git clone -b dev $repositoryUrl
 fi
 
-# cd g-crm-app 
+# cd g-merchant-app 
 # log "$(git branch)"
 # # 拉取最新代码
 # git pull
 # cd ..  
 
 # 将代码放到github runner 执行目录下
-cd g-crm-app && mv * ../ 
+cd g-merchant-app && mv * ../ 
 
 pwd
 
